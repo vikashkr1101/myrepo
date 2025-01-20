@@ -1,5 +1,5 @@
 module.exports = {
-    testEnvironment: 'jsdom',
+  testEnvironment: 'jest-environment-jsdom',
     transform: {
       '^.+\\.vue$': '@vue/vue3-jest',
       '^.+\\.js$': 'babel-jest'
