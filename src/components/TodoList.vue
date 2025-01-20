@@ -59,23 +59,23 @@
   export default {
     data() {
       return {
-        todos: [], // Reactive todos array
+        todos: [],
         localName: localStorage.getItem("name") || "", 
         loading: true,
         error: null,
       };
     },
     created() {
-      this.fetchTodos(); // Fetch todos when component is created
+      this.fetchTodos(); 
     },
     methods: {
       async fetchTodos() {
         this.loading = true;
         try {
-          const response = await axios.get(API_URL); // Correct API call
-          this.todos = response.data; // Update reactive todos array
+          const response = await axios.get(API_URL); 
+          this.todos = response.data; 
         } catch (error) {
-          this.error = error; // Handle errors
+          this.error = error; 
           console.error("Error fetching todos:", error);
         } finally {
           this.loading = false;
